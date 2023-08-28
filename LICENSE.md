@@ -1,0 +1,1 @@
+Unauthorized use of the source files is not permitted.

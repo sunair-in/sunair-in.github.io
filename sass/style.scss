@@ -1,0 +1,29 @@
+.heroimage {
+    width: 100vw;
+}
+
+.home-message {
+    text-align: center;
+}
+
+.section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.wellness-image{
+    width: 50%;
+    align-self: center;
+    margin: 50px;
+}
+
+.vert-flex-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.contactform-container{
+    height: 1200px;
+    width: 100%;
+    overflow-y: hidden;
+}
