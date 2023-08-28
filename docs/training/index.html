@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Training |  </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #FFFFFF;
+        /* Primary theme text color */
+        --primary-text-color: #222b00;
+        --primary-text-color-over: #ef8203;
+        /* Primary theme link color */
+        --primary-link-color: #ef8203;
+        /* Secondary color: the background body color */
+        --secondary-color: FFFFFF;
+        --secondary-text-color: #303030;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #d46e13;
+        --toc-background-color: white;
+        --code-color: #4a4a4a;
+        --code-background-color: white;
+        --shadow-color: #ddd;
+        /* Font used for headers (h1 & h2) */
+        --header-font-family: "FreeMono", sans-serif;
+        /* Font used for text */
+        --text-font-family: "FreeMono", sans-serif;
+    }
+</style>
+    
+    <link href="https://fonts.cdnfonts.com/css/freemono" rel="stylesheet">
+
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://sunair.in/juice.css">
+    
+    <link rel="stylesheet" href="https://sunair.in/style.css">
+
+</head>
+
+<body>
+    
+<header class="box-shadow">
+    
+
+<a href="https://sunair.in/">
+    <div class="logo">
+        <img src="https://sunair.in/sunair_logo.svg" alt="logo">
+        <span class="logo-name"></span>
+    </div>
+</a>
+
+
+<nav>
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://sunair.in/tours-and-travel/">Tours &amp; Travel</a>
+    
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://sunair.in/training/">Training</a>
+    
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://sunair.in/wellness/">Wellness</a>
+    
+    
+    
+    
+    <a class="nav-item subtitle-text" href="https://sunair.in/contact/">Contact</a>
+    
+    
+    
+</nav>
+
+</header>
+
+
+    <main>
+        
+        
+        
+        
+
+        <div class="content text">
+            
+<div class="heading-text"></div>
+<p>SUNAIR has been providing trainings for the last 9 years, for Corporates, Senior Classes in Schools and Colleges, Institutes, focusing on soft skills, spoken English and preparing for interviews and promotions.</p>
+<p>Training is provided by professionals certified in Prevention of Sexual Harassment at Workplace (POSH). Specialising in training in POSH, POSH Awareness Programs for the employees and ICC members and Policy Making.</p>
+<p>For more information about the training packages, please <a href="/contact"><b>Contact Us.<b/></a></p>
+
+
+        </div>
+
+        
+        
+    </main>
+
+    
+<footer>
+    <small class="subtext">
+        <a href="https://sunair.in">SUNAIR</a> © 2023
+    </small>
+</footer>
+
+</body>
+<script>
+    const scrollHandler = entries => {
+        // Find the first entry which intersecting and ratio > 0.9 to highlight.
+        let entry = entries.find(entry => {
+            return entry.isIntersecting && entry.intersectionRatio > 0.9;
+        });
+        if (!entry) return;
+
+        document.querySelectorAll(".toc a").forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        // let url = new URL(`#${entry.target.id}`);
+        let link = document.querySelector(`.toc a[href$="${decodeURIComponent(`#${entry.target.id}`)}"]`)
+        if (link) {
+            link.classList.add("active");
+            link.scrollIntoView({ behavior: "auto", block: "nearest" });
+        }
+    };
+    // Set -100px root margin to improve highlight experience.
+    const observer = new IntersectionObserver(scrollHandler, { threshold: 1 });
+    let items = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
+    items.forEach(item => observer.observe(item));
+</script>
+
+</html>
