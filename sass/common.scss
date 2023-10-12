@@ -1,0 +1,187 @@
+@import "constant.scss";
+
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/freefont/OpenSans-VariableFont_wdth\,wght.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: OpenSans-Italic;
+    src: url("../fonts/freefont/OpenSans-Italic-VariableFont_wdth\,wght.ttf") format('truetype');
+}
+
+body{
+    font-size: 1em;
+    font-family: OpenSans;
+    margin: 0;
+}
+
+.display-flex{
+    display: flex;
+}
+
+.button-primary{
+    background-color: $base-orange;
+    color: $white;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    min-height: 3.1em;
+    min-width: 12.1em;
+    font-weight: bold;
+}
+
+.button-primary-inverted{
+    color: $base-orange;
+    background-color: $white;
+    border: 1px solid $base-orange;
+    border-radius: 3px;
+    cursor: pointer;
+    min-height: 3.1em;
+    min-width: 12.1em;
+    font-weight: bold;
+}
+
+.alternate-bg-color{
+    background-color:$off-white;
+}
+
+.section-header{
+    font-weight: 900;
+    margin-top: 0px;
+    text-align: center;
+    padding-top: 0.68em;
+}
+
+.section-description{
+    text-align: center;
+    padding-bottom: 2em;
+    margin-top: 3em;
+}
+
+.wrapper{
+    padding: 0px 11em;
+}
+
+a.no-default-style:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+a.no-default-style:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+a{
+    cursor: pointer;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .slide-entity{
+        display: flex;
+        flex-direction: column;
+
+        img{
+            height: 25em;
+            width: 19em;
+        }
+
+        .place{
+            font-weight: 700;
+            padding-left: .5em;
+        }
+
+        .address{
+            padding-left: .5em;
+        }
+
+        .bottom-right {
+            position: absolute;
+            bottom: 6px;
+            right: 6px;
+            background-color: $white;
+            width: 7em;
+            height: 3em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .column-header{
+            margin: 0;
+        }
+
+        .card{
+            border-radius: 3px;
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+            border: solid 1px $grey;
+            display: flex;
+            padding: 0.5em;
+
+            img{
+                max-width: 6em;
+                max-height: 5.6em;
+            }
+
+            .card-description{
+                display: flex;
+                flex-direction: column;
+                padding: 0 .5em;
+                .card-title{
+                    font-size: 15px;
+                    margin: 0;
+                    color:$blue;
+                }
+                .card-info{
+                    font-size: 13px;
+                    color:$dark-grey;
+                }
+            }
+        }
+    }
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.line-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    .line {
+        height: .15em;
+        position: relative;
+    }
+    
+    .line.grey {
+        background-color: $line-grey;
+        width: 1rem;
+    }
+    
+    .line.primary-color {
+        background-color: $base-orange;
+        width: 2rem;
+    }
+}

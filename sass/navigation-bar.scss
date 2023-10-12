@@ -1,0 +1,22 @@
+@import "constant.scss";
+
+.header-section{
+    justify-content: space-evenly;
+    height: 6.2em;
+    align-items: center;
+}
+
+.logo{
+    min-height: 3em;
+    min-width: 5em;
+    height: 4em;
+    width: 5.5em;
+    cursor: pointer;
+}
+
+.nav-bar{
+    flex-grow: .3;
+    justify-content: space-evenly;
+    color: $black;
+    font-weight: 600;
+}

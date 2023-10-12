@@ -1,154 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Tours &amp; Travel |  </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    
-    <style>
-    :root {
-        /* Primary theme color */
-        --primary-color: #FFFFFF;
-        /* Primary theme text color */
-        --primary-text-color: #222b00;
-        --primary-text-color-over: #ef8203;
-        /* Primary theme link color */
-        --primary-link-color: #ef8203;
-        /* Secondary color: the background body color */
-        --secondary-color: FFFFFF;
-        --secondary-text-color: #303030;
-        /* Highlight text color of table of content */
-        --toc-highlight-text-color: #d46e13;
-        --toc-background-color: white;
-        --code-color: #4a4a4a;
-        --code-background-color: white;
-        --shadow-color: #ddd;
-        /* Font used for headers (h1 & h2) */
-        --header-font-family: "FreeMono", sans-serif;
-        /* Font used for text */
-        --text-font-family: "FreeMono", sans-serif;
-    }
-</style>
-    
-    <link href="https://fonts.cdnfonts.com/css/freemono" rel="stylesheet">
-
-    <link rel="stylesheet" href="/normalize.css">
-    <link rel="stylesheet" href="https://sunair.in/juice.css">
-    
-    <link rel="stylesheet" href="https://sunair.in/style.css">
-
-</head>
-
-<body>
-    
-<header class="box-shadow">
-    
-
-<a href="https://sunair.in/">
-    <div class="logo">
-        <img src="https://sunair.in/sunair_logo.svg" alt="logo">
-        <span class="logo-name"></span>
-    </div>
-</a>
-
-
-<nav>
-    
-    
-    
-    <a class="nav-item subtitle-text" href="https://sunair.in/tours-and-travel/">Tours &amp; Travel</a>
-    
-    
-    
-    
-    <a class="nav-item subtitle-text" href="https://sunair.in/training/">Training</a>
-    
-    
-    
-    
-    <a class="nav-item subtitle-text" href="https://sunair.in/wellness/">Wellness</a>
-    
-    
-    
-    
-    <a class="nav-item subtitle-text" href="https://sunair.in/contact/">Contact</a>
-    
-    
-    
-</nav>
-
-</header>
-
-
-    <main>
-        
-        
-        
-        
-
-        <div class="content text">
-            
-<div class="heading-text"></div>
-<p>SUNAIR understands your Tours and Travel needs and provides curated travel opportunities for you, tailored to your needs.</p>
-<p>We offer travel packages in :</p>
-<ul>
-<li>Asia</li>
-<li>Europe</li>
-<li>America</li>
-<li>Middle East</li>
-</ul>
-<p>We also provide the following services:</p>
-<ul>
-<li>Flights</li>
-<li>Hotels</li>
-<li>Travel Packages</li>
-<li>Transports</li>
-<li>Cruises</li>
-<li>Adventure Trips !</li>
-</ul>
-<p>For more information about the travel packages, please <a href="/contact"><b>Contact Us.<b/></a></p>
-
-
+<html>
+    <head>
+        <title>Zola</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to Zola!</h1>
+            <p>
+                You're seeing this page because we couldn't find a template to render.
+            </p>
+            <p>
+                To modify this page, create a <b>page.html</b> file in the templates directory or
+                <a href="https://www.getzola.org/documentation/themes/installing-and-using-themes/" target="_blank">install a theme</a>.
+                <br>
+                You can find what variables are available in this template in the <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;templates&#x2F;pages-sections&#x2F;#page-variables" target="_blank">documentation</a>.
+            </p>
         </div>
-
-        
-        
-    </main>
-
-    
-<footer>
-    <small class="subtext">
-        <a href="https://sunair.in">SUNAIR</a> © 2023
-    </small>
-</footer>
-
-</body>
-<script>
-    const scrollHandler = entries => {
-        // Find the first entry which intersecting and ratio > 0.9 to highlight.
-        let entry = entries.find(entry => {
-            return entry.isIntersecting && entry.intersectionRatio > 0.9;
-        });
-        if (!entry) return;
-
-        document.querySelectorAll(".toc a").forEach((item) => {
-            item.classList.remove("active");
-        });
-
-        // let url = new URL(`#${entry.target.id}`);
-        let link = document.querySelector(`.toc a[href$="${decodeURIComponent(`#${entry.target.id}`)}"]`)
-        if (link) {
-            link.classList.add("active");
-            link.scrollIntoView({ behavior: "auto", block: "nearest" });
-        }
-    };
-    // Set -100px root margin to improve highlight experience.
-    const observer = new IntersectionObserver(scrollHandler, { threshold: 1 });
-    let items = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
-    items.forEach(item => observer.observe(item));
-</script>
-
+        <footer>
+            <a href="https://www.getzola.org/documentation/getting-started/cli-usage/" target="_blank">Get started with Zola</a>
+        </footer>
+        <style>
+            html {
+                line-height: 1.5;
+            }
+            h1 {
+                margin-bottom: 2rem;
+            }
+            .container {
+                font-family: "sans-serif";
+                text-align: center;
+                margin-top: 20vh;
+                padding: 2rem;
+                background: #e9e9e9;
+            }
+            footer {
+                position: fixed;
+                width: 100%;
+                bottom: 1rem;
+                text-align: center;
+            }
+        </style>
+    </body>
 </html>

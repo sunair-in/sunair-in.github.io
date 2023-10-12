@@ -1,152 +1,521 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    
-    <style>
-    :root {
-        /* Primary theme color */
-        --primary-color: #FFFFFF;
-        /* Primary theme text color */
-        --primary-text-color: #222b00;
-        --primary-text-color-over: #ef8203;
-        /* Primary theme link color */
-        --primary-link-color: #ef8203;
-        /* Secondary color: the background body color */
-        --secondary-color: FFFFFF;
-        --secondary-text-color: #303030;
-        /* Highlight text color of table of content */
-        --toc-highlight-text-color: #d46e13;
-        --toc-background-color: white;
-        --code-color: #4a4a4a;
-        --code-background-color: white;
-        --shadow-color: #ddd;
-        /* Font used for headers (h1 & h2) */
-        --header-font-family: "FreeMono", sans-serif;
-        /* Font used for text */
-        --text-font-family: "FreeMono", sans-serif;
-    }
-</style>
-    
-    <link href="https://fonts.cdnfonts.com/css/freemono" rel="stylesheet">
-
-    <link rel="stylesheet" href="/normalize.css">
-    <link rel="stylesheet" href="https://sunair.in/juice.css">
-    
-    <link rel="stylesheet" href="https://sunair.in/style.css">
-
-</head>
-
-<body>
-    
-
-    <header class="pos-absolute" style="background-color: transparent">
-        
-
-<a href="https://sunair.in/">
-    <div class="logo">
-        <img src="https://sunair.in/sunair_logo.svg" alt="logo">
-        <span class="logo-name"></span>
-    </div>
-</a>
-
-
-<nav>
-    
-    
-    
-    <a class="nav-item subtitle-text" href="https://sunair.in/tours-and-travel/">Tours &amp; Travel</a>
-    
-    
-    
-    
-    <a class="nav-item subtitle-text" href="https://sunair.in/training/">Training</a>
-    
-    
-    
-    
-    <a class="nav-item subtitle-text" href="https://sunair.in/wellness/">Wellness</a>
-    
-    
-    
-    
-    <a class="nav-item subtitle-text" href="https://sunair.in/contact/">Contact</a>
-    
-    
-    
-</nav>
-
-    </header>
-
-    <div class="hero">
-        
-    <img class="heroimage" src="https://sunair.in/hero.jpg"></img>
-
-    </div>
-
-    
-
-    <main>
-        
-        
-        
-        
-
-        <div class="content text">
-            
-<div class="home-message">
-    From the snow-capped peaks of the Himalyas
-    to the pristine beaches of the Maldives, we've 
-    handpicked the most captivating and culturally
-    rich places for you to discover !
-</div>
-<div class="section">
-    <a href="/contact"><b>Contact Us</b></a> for more details !
-</div>
-
-
+<html>
+    <head>
+        <link rel="stylesheet" href="https://sunair.in/style.css">
+    </head>
+    <body>
+        <div class="header-section display-flex">
+            <a class="no-default-style" href="#home">
+                <img class="logo" src="https://sunair.in/images/sunair_logo.svg"></img>
+            </a>
+            <div class="nav-bar display-flex">
+                <a class="no-default-style" href="#home">Home</a>
+                <a class="no-default-style" href="#tour">Tour & Travel</a>
+                <a class="no-default-style" href="#wellness">Wellness</a>
+                <a class="no-default-style" href="#services">Our Services</a>
+                <a class="no-default-style" href="#trainings">Trainings</a>
+                <a class="no-default-style" href="#contact">Contact Us</a>
+            </div>
+            <a class="no-default-style" href="#tour">
+                <button class="button-primary">EXPLORE MORE</button>
+            </a>
         </div>
-
-        
-        
-    </main>
-
-    
-<footer>
-    <small class="subtext">
-        <a href="https://sunair.in">SUNAIR</a> © 2023
-    </small>
-</footer>
-
-</body>
-<script>
-    const scrollHandler = entries => {
-        // Find the first entry which intersecting and ratio > 0.9 to highlight.
-        let entry = entries.find(entry => {
-            return entry.isIntersecting && entry.intersectionRatio > 0.9;
-        });
-        if (!entry) return;
-
-        document.querySelectorAll(".toc a").forEach((item) => {
-            item.classList.remove("active");
-        });
-
-        // let url = new URL(`#${entry.target.id}`);
-        let link = document.querySelector(`.toc a[href$="${decodeURIComponent(`#${entry.target.id}`)}"]`)
-        if (link) {
-            link.classList.add("active");
-            link.scrollIntoView({ behavior: "auto", block: "nearest" });
-        }
-    };
-    // Set -100px root margin to improve highlight experience.
-    const observer = new IntersectionObserver(scrollHandler, { threshold: 1 });
-    let items = document.querySelectorAll('h1,h2,h3,h4,h5,h6');
-    items.forEach(item => observer.observe(item));
-</script>
-
+        <div id="home">
+            <img class="home-background-banner" src="https://sunair.in/images/home/main_banner.png"></img>
+            <div class="centered-text display-flex">
+                <label class="main-text">Experience Travel with SUN AIR</label>
+                <label class="sub-text">Go through with our various travel packages</label>
+                <a class="no-default-style" href="#tour">
+                    <button class="button-primary" >Tour & Travel Deals</button>
+                </a>
+            </div>
+        </div>
+        <div id="tour">
+            <h1 class="section-header">Explore the World With Us</h1>
+            <div class="line-container">
+                <div class="line grey"></div>
+                <div class="line primary-color"></div>
+                <div class="line grey"></div>
+            </div>
+            <div class="section-description">
+                <label>From the snow-capped peaks of the Himalays to the Pristine beaches of the Maldives, we've handpicked the most captivating and culturally rich places for you to discover!</label>
+            </div>
+            <div class="slider-container wrapper">
+                <div class="slide active">
+                    <div class="column">
+                        <h3 class="column-header">ASIA</h3>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/asia/bali.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">BALI, INDONESIA</h5>
+                                <label class="card-info">Explore new and offbeat Islands in Bali while keeping up with the trends</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/asia/boracay.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">BORACAY, PHILIPPINES</h5>
+                                <label class="card-info">Hassle-free holiday packages inclusive of flights, hotels and transfers</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/asia/bhutan.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">BHUTAN</h5>
+                                <label class="card-info">Explore the most popular cities of Bhutan and travel across the Phuentsholing border</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/asia/nguyen.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">NGUYEN HUE, VIETNAM</h5>
+                                <label class="card-info">Grab our top-selling packages at unbelievable prices, get free visa assistance and more!</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3 class="column-header">EUROPE</h3>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/europe/eiffel-tower.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">EIFFEL TOWER, PARIS</h5>
+                                <label class="card-info">Rejuvenating Paris Family Vacation Package with Airfare</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/europe/barcelona.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">BARCELONA, SPAIN</h5>
+                                <label class="card-info">Most Budgeted Spain Tour Packages For A Fun Holiday</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/europe/london-bridge.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">LONDON BRIDGE, UK</h5>
+                                <label class="card-info">Best-Selling London Honeymoon Packages For Your famlily</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/europe/amsterdam.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">AMSTERDAM, NETHERLANDS</h5>
+                                <label class="card-info">Remarkable Amsterdam Honeymoon Package with Airfare</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3 class="column-header">NORTH AMERICA</h3>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/north-america/times-square.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">TIMES SQUARE, NEW YORK</h5>
+                                <label class="card-info">Explore Our Amazing Summer Special USA Honeymoon Package</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/north-america/disneyland.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">DISNEY LAND, CALIFORNIA</h5>
+                                <label class="card-info">The land of milk and honey: America is awaiting for you</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/north-america/mount-rushmore.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">MOUNT RUSHMORE, SOUTH DAKOTA</h5>
+                                <label class="card-info">Mount Rushmore Tour Package - Best Mount Rushmore Tour</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/north-america/toronto.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">TORONTO, CANADA</h5>
+                                <label class="card-info">A tremendous tour through Canada with Airfare</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="column">
+                        <h3 class="column-header">AFRICA</h3>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/africa/botswana.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">BOTSWANA</h5>
+                                <label class="card-info">Embark on a safari adventure in Botswana's pristine wilderness</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/africa/cape-town.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">CAPE TOWN, SOUTH AFRICA</h5>
+                                <label class="card-info">Experience the breathtaking beauty of Cape Town, where nature meets urban charm</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/africa/ethiopia.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">ETHIOPIA</h5>
+                                <label class="card-info">Discover Ethiopia's ancient wonders and vibrant culture</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/africa/mombasa.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">MOMBASA, KENYA</h5>
+                                <label class="card-info">Relax on the sun-kissed beaches of Mombasa, Kenya's coastal gem</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3 class="column-header">SOUTH AMERICA</h3>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/south-america/machu-icchu.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">MACHU PICCHU, PERU</h5>
+                                <label class="card-info">An ancient Incan citadel perched among the Andes, offering a glimpse into history's secrets</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/south-america/rio-de-jenerio.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">RIO DE JANEIRO, BRAZIL</h5>
+                                <label class="card-info">Dive into the vibrant rhythm of Rio de Janeiro</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/south-america/iguazu-falls.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">IGUAZU FALLS, ARGENTINA</h5>
+                                <label class="card-info">Surrender to the awe-inspiring majesty of Iguazu Falls</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/south-america/torres-del.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">TORRES DEL PAINE, CHILE</h5>
+                                <label class="card-info">Journey to the untamed wilderness</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3 class="column-header">AUSTRALIA</h3>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/australia/sydney.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">SYDNEY</h5>
+                                <label class="card-info">Harbor city, home to the famous Sydney Opera House and stunning beaches</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/australia/great-barrier-reef.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">GREAT BARRIER REEF, QUEENSLAND</h5>
+                                <label class="card-info">Dive into the world's largest coral reef system</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/australia/melbourne.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">MELBOURNE</h5>
+                                <label class="card-info">A cultural hub known for its diverse neighborhoods</label>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://sunair.in/images/explore-world/australia/uluru-kata.png"/>
+                            <div class="card-description">
+                                <h5 class="card-title">ULURU-KATA TJUTA</h5>
+                                <label class="card-info">Witness the ancient beauty and sacred rock formations in it's heart</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="top-destinations" class="alternate-bg-color">
+            <h1 class="section-header">We Provide Top Destinations</h1>
+            <div class="line-container">
+                <div class="line grey"></div>
+                <div class="line primary-color"></div>
+                <div class="line grey"></div>
+            </div>
+            <div class="section-description">
+                <label>We provide a wide range of services. Please have a look on the following</label>
+            </div>
+            <div class="slider-container">
+                <div class="slide">
+                    <div class="slide-entity top-destinations-holder">
+                        <img src="https://sunair.in/images/top-destinations/maldives.png"/>
+                        <div class="place bottom-right">Maldives</div>
+                    </div>
+                    <div class="slide-entity top-destinations-holder">
+                        <img src="https://sunair.in/images/top-destinations/thailand.png"/>
+                        <div class="place bottom-right">Thailand</div>
+                    </div>
+                    <div class="slide-entity top-destinations-holder">
+                        <img src="https://sunair.in/images/top-destinations/bali.png"/>
+                        <div class="place bottom-right">Bali</div>
+                    </div>
+                    <div class="slide-entity top-destinations-holder">
+                        <img src="https://sunair.in/images/top-destinations/greece.png"/>
+                        <div class="place bottom-right">Greece</div>
+                    </div>
+                </div>
+                <div class="slide active">
+                    <div class="slide-entity top-destinations-holder">
+                        <img src="https://sunair.in/images/top-destinations/rome.png"/>
+                        <div class="place bottom-right">Rome</div>
+                    </div>
+                    <div class="slide-entity top-destinations-holder">
+                        <img src="https://sunair.in/images/top-destinations/sydney.png"/>
+                        <div class="place bottom-right">Sydney</div>
+                    </div>
+                    <div class="slide-entity top-destinations-holder">
+                        <img src="https://sunair.in/images/top-destinations/dubai.png"/>
+                        <div class="place bottom-right">Dubai</div>
+                    </div>
+                    <div class="slide-entity top-destinations-holder">
+                        <img src="https://sunair.in/images/top-destinations/japan.png"/>
+                        <div class="place bottom-right">Japan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="inbound-tours">
+            <h1 class="section-header">Inbound Tours</h1>
+            <div class="line-container">
+                <div class="line grey"></div>
+                <div class="line primary-color"></div>
+                <div class="line grey"></div>
+            </div>
+            <div class="section-description">
+                <label>We also provide Domestic Travel packages in India</label>
+            </div>
+            <div class="slider-container">
+                <div class="slide active">
+                    <div class="slide-entity">
+                        <img src="https://sunair.in/images/inbound-tours/taj-mahal.png"/>
+                        <label class="place">TAJ MAHAL</label>
+                        <label class="address">AGRA, INDIA</label>
+                    </div>
+                    <div class="slide-entity">
+                        <img src="https://sunair.in/images/inbound-tours/varanasi.png"/>
+                        <label class="place">VARANASI</label>
+                        <label class="address">INDIA</label>
+                    </div>
+                    <div class="slide-entity">
+                        <img src="https://sunair.in/images/inbound-tours/statue-unity.png"/>
+                        <label class="place">STATUR OF UNITY</label>
+                        <label class="address">NARMADA, INDIA</label>
+                    </div>
+                    <div class="slide-entity">
+                        <img src="https://sunair.in/images/inbound-tours/leh.png"/>
+                        <label class="place">LEH LADAKH</label>
+                        <label class="address">INDIA</label>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-entity">
+                        <img src="https://sunair.in/images/inbound-tours/amritsar.png"/>
+                        <label class="place">GOLDEN TEMPLE</label>
+                        <label class="address">PUNJAB, INDIA</label>
+                    </div>
+                    <div class="slide-entity">
+                        <img src="https://sunair.in/images/inbound-tours/jaipur.png"/>
+                        <label class="place">HAWA MAHAL</label>
+                        <label class="address">RAJASTHAN, INDIA</label>
+                    </div>
+                    <div class="slide-entity">
+                        <img src="https://sunair.in/images/inbound-tours/kerela.png"/>
+                        <label class="place">KERELA</label>
+                        <label class="address">INDIA</label>
+                    </div>
+                    <div class="slide-entity">
+                        <img src="https://sunair.in/images/inbound-tours/mumbai.png"/>
+                        <label class="place">MUMBAI</label>
+                        <label class="address">INDIA</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wellness" class="alternate-bg-color">
+            <h1 class="section-header">Wellness Programmes</h1>
+            <div class="line-container">
+                <div class="line grey"></div>
+                <div class="line primary-color"></div>
+                <div class="line grey"></div>
+            </div>
+            <div class="wellness-services" style="margin-top: 3em;">
+                <div class="service">
+                    <img src="https://sunair.in/images/wellness/ayurveda.png"/>
+                    <label class="title">Ayurveda</label>
+                    <p class="description">Ayurveda is one of the foundational pillars of Naad Wellness. Translating to 'the science of life'. Ayurveda recognizes human beings and nature to be one.</p>
+                </div>
+                <div class="service">
+                    <img src="https://sunair.in/images/wellness/aromatherapy.png"/>
+                    <label class="title">Teleport your soul to a Tranquil dimension</label>
+                    <p class="description">At Naad wellness, we offer Aromatherapy, where we treat ailments using aromatic essendtial oils derived from a wide variety of healing plants.</p>
+                </div>
+            </div>
+            <div class="wellness-services">
+                <div class="service">
+                    <img src="https://sunair.in/images/wellness/naturopathy.png"/>
+                    <label class="title">Medical Experiences by Naad</label>
+                    <p class="description">With the perfect blend of Ayurveda and Naturopathy Naad offers a broad-spectrum of medical therapies and services.</p>
+                </div>
+                <div class="service">
+                    <img src="https://sunair.in/images/wellness/immunity.png"/>
+                    <label class="title">Begin your Journey to a Stronger self</label>
+                    <p class="description">This new normal isn't easy on anyone of us and getting back to our routines with these escalated precautions can be tough. In these risky times, it is extremely essential to have a sound immune system.</p>
+                </div>
+            </div>
+        </div>
+        <div id="services">
+            <h1 class="section-header">Our Services</h1>
+            <div class="line-container">
+                <div class="line grey"></div>
+                <div class="line primary-color"></div>
+                <div class="line grey"></div>
+            </div>
+            <div class="section-description">
+                <label>We are providing a wide range of services.Please have a look on the following:</label>
+            </div>
+            <div class="matrix wrapper">
+                <div class="cell">
+                    <img src="https://sunair.in/images/services/flight.svg"/>
+                    <label class="service-title">FLIGHTS</label>
+                    <p class="service-description">
+                        We are reliable travel agent in India, which offers great deals on air tickets. Book flights for all destinations across India or the world at the lowerst airfares with us.
+                    </p>
+                </div>
+                <div class="cell">
+                    <img src="https://sunair.in/images/services/hotel.svg"/>
+                    <label class="service-title">HOTELS</label>
+                    <p class="service-description">
+                        We have a wide range of luxury and budget-friendly hotel chain properties. We have picked the fines hotels in India or in the world with world-class amenities.
+                    </p>
+                </div>
+                <div class="cell">
+                    <img src="https://sunair.in/images/services/travel-package.svg"/>
+                    <label class="service-title">TRAVEL PACKAGES</label>
+                    <p class="service-description">
+                        Longing for a vacation and have no idea where to go? We bring you the best opportunity to enjoy your holidays at different destinations across the world.    
+                    </p>
+                </div>
+                <div class="cell">
+                    <img src="https://sunair.in/images/services/transport.svg"/>
+                    <label class="service-title">TRANSPORT</label>
+                    <p class="service-description">
+                        We provide all options at one place from attractive tour packages to transport facility like Car rentals, Bus rentals, Luxury van and tempo traveler to hire anywhere in the world.
+                    </p>
+                </div>
+                <div class="cell">
+                    <img src="https://sunair.in/images/services/cruise.svg"/>
+                    <label class="service-title">CRUISE</label>
+                    <p class="service-description">
+                        If you're looking for a Cruise package to relax and indulge with friends and family, a new adventure, you've come to the right place.
+                    </p>
+                </div>
+                <div class="cell">
+                    <img src="https://sunair.in/images/services/adventure-trip.svg"/>
+                    <label class="service-title">ADVENTURE TRIPS</label>
+                    <p class="service-description">
+                        Explor exotic adventure tours near Delhi or in the world with our adventures tour packages and experiences best activites at the best price.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="trainings" class="alternate-bg-color">
+            <h1 class="section-header">Trainings</h1>
+            <div class="line-container">
+                <div class="line grey"></div>
+                <div class="line primary-color"></div>
+                <div class="line grey"></div>
+            </div>
+            <div class="training-description wrapper">
+                <p>SUNAIR has been providing trainings for the last 9 years, for Corporate, Senior Classes in Schools and Colleges, Institute, focusing on soft skills, spoken English and preparing for interviews and promotions.</p>
+                <p>POSH traing is provided to the employees and ICC members by a professional certified in Prevention of Sexual Harassment at Workplace(POSH) and assistance in Policy Making</p>
+            </div>
+        </div>
+        <div id="contact">
+            <h1 class="section-header">Contact Us</h1>
+            <div class="line-container">
+                <div class="line grey"></div>
+                <div class="line primary-color"></div>
+                <div class="line grey"></div>
+            </div>
+            <form id="contact_us_form">
+                <div class="wrapper">
+                    <div class="contact-row">
+                        <div class="field">
+                            <label for="name">Enter Your Name</label>
+                            <input type="text" id="name" name="name" class="field_input" required/>
+                        </div>
+                        <div class="field">
+                            <label for="phone_number">Enter Your Contact Number</label>
+                            <input type="number" id="phone_number" name="phone_number" class="field_input" required/>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="field">
+                            <label for="sender_emailId">Enter Your Email Id</label>
+                            <input type="email" id="sender_emailId" name="sender_emailId"  class="field_input" required/>
+                        </div>
+                        <div class="field">
+                            <label for="product_service">Product/Service Type</label>
+                            <select id = "product_service" name="product_service" class="field_input" onchange = "" >  
+                                <option>Select an option</option>  
+                                <option value="tours_&_travel"> Tours & Travel </option>  
+                                <option value="wellness"> Wellness </option>  
+                                <option value="trainings"> Trainings </option>  
+                            </select>  
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="field">
+                            <label for="details">Enter Details</label>
+                            <textarea type="text" id = "details"  name="details" class="field_input" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="contact-button">
+                        <a class="no-default-style" href="" onclick="contactFormReset()">
+                            <button class="button-primary-inverted" >RESET</button>
+                        </a>
+                        <a class="no-default-style left-space" href="">
+                            <button class="button-primary" >SUBMIT</button>
+                        </a>
+                        <a class="mailtoui" id="mail_to_ui"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="footer-section wrapper">
+            <img class="logo" src="https://sunair.in/images/sunair_logo.svg"></img>
+            <p>
+                Sun Air offers 'End to End' travel solutions including air tickets, hotel bookings in India and abroad, cab booking for all major cities. We offers various trainings  and run wellness programmes to keep you healthy & strong.
+            </p>
+            <div class="social-media-icon-wrapper">
+                <img src="https://sunair.in/images/social-media/facebook.svg"/>
+                <img src="https://sunair.in/images/social-media/twitter.svg"/>
+                <img src="https://sunair.in/images/social-media/youtube.svg"/>
+                <img src="https://sunair.in/images/social-media/instagram.svg"/>
+            </div>
+            <div class="footer-nav">
+                <a class="no-default-style" href="#home">Home</a>
+                <a class="no-default-style" href="#tour">Tour & Travel</a>
+                <a class="no-default-style" href="#wellness">Wellness</a>
+                <a class="no-default-style" href="#services">Our Services</a>
+                <a class="no-default-style" href="#trainings">Trainings</a>
+                <a class="no-default-style" href="#contact">Contact Us</a> 
+            </div>
+        </div>
+        <div class="copyright-footer wrapper">
+            <label>Copyright &#169;2023 All rights reserved</label>
+        </div>
+        <script src="https://sunair.in/js/explore.js" defer></script>
+        <script src="https://sunair.in/js/inbound-tours.js" defer></script>
+        <script src="https://sunair.in/js/top-destination.js" defer></script>
+        <script src="https://sunair.in/js/contact-us.js" defer></script>
+        <script src="https://sunair.in/thirparty/mailtoui/mailtoui-min.js" defer></script>
+    </body>
 </html>
