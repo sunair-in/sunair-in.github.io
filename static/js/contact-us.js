@@ -11,7 +11,7 @@ function formGenerator(){
     const senderEmailId = document.getElementById("sender_emailId");
     const selectedService = document.getElementById("product_service");
     const details = document.getElementById("details");
-    const receiverEmailId = "hiteshkochhar@gmail.com";
+    const receiverEmailId = "kanchanverma2810@gmail.com";
 
     const elementObj = {
         subject: `Inquire for ${selectedService.value}`,
