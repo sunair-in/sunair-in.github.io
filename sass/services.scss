@@ -1,0 +1,32 @@
+#services{
+    .matrix {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .cell{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            width: 23em;
+            align-items: center;
+            margin-bottom: 3em;
+
+            img{
+                width: 6em;
+                height: 6em;
+            }
+        
+            .service-title{
+                margin-top: 1.7em;
+                margin-bottom: 1.5em;
+                font-weight: 700;
+            }
+
+            .service-description{
+                width: 18em;
+                margin: 0;
+            }
+        }
+      }
+}

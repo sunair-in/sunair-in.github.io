@@ -1,0 +1,16 @@
+#tour{
+    .slider-container{
+        height: 34em;
+    }
+
+    .slide{
+        width: calc(100% - 22em);
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    
+    .column{
+        width: 20em;
+    }
+
+}

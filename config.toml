@@ -10,15 +10,7 @@ build_search_index = false
 # For overriding the default output directory `public`, set it to another value (e.g.: "docs")
 output_dir = "docs"
 
-# The site theme to use.
-theme = "juice"
-
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
-
-[extra]
-# Put all your custom variables here
-juice_logo_name = ""
-juice_logo_path = "sunair_logo.svg"

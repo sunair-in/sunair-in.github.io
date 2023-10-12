@@ -1,0 +1,51 @@
+
+#contact{
+    .contact-row{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        .field{
+            display: flex;
+            flex-direction: column;
+
+            .field_input{
+                width: 30em;
+                margin-bottom: 2em;
+                margin-top: .5em;
+            }
+        }
+    }
+
+    .contact-button{
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+        padding-bottom: 2em;
+
+        .button-primary-inverted, .button-primary {
+            min-width: 7.2em;
+            font-size: 1.13em;
+            min-height: 2.7em;
+        }
+        .left-space{
+            margin-left: 1em;
+        }
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+    #contact_us_form{
+        margin-top: 3em;
+    }
+}
