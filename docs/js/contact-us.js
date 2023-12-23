@@ -21,7 +21,8 @@ function formGenerator(){
                 Email: ${senderEmailId.value}
                 Inquire Details: ${details.value}`
     }
-    return `mailto:${receiverEmailId}?${new URLSearchParams(elementObj).toString()}`
+    mailtoString = `mailto:${receiverEmailId}?subject=${encodeURIComponent(elementObj.subject)}&body=${encodeURIComponent(elementObj.body)}`
+    return mailtoString
 }
 
 let loginForm = document.getElementById("contact_us_form");
