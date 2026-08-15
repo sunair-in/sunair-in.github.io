@@ -1,16 +1,14 @@
+@import "constant.scss";
+
 #tour{
     .slider-container{
-        height: 34em;
+        height: clamp(26em, 62vw, 34em);
     }
 
     .slide{
-        width: calc(100% - 22em);
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: stretch;
         height: 100%;
+        gap: 1.75em;
     }
-    
-    .column{
-        width: 20em;
-    }
-
 }

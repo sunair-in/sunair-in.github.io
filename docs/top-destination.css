@@ -1,1 +1,1 @@
-#top-destinations .slider-container{height:27em}#top-destinations .top-destinations-holder{position:relative;text-align:center}
+#top-destinations .slider-container{height:clamp(18em,66vw,26em)}#top-destinations .top-destinations-holder{position:relative;text-align:center}

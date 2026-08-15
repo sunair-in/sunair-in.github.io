@@ -1,6 +1,6 @@
 #top-destinations{
     .slider-container{
-        height: 27em;
+        height: clamp(18em, 66vw, 26em);
     }
 
     .top-destinations-holder{

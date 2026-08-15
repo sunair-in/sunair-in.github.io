@@ -1,1 +1,1 @@
-#inbound-tours .slider-container{height:30em}
+#inbound-tours .slider-container{height:clamp(22em,68vw,29em)}

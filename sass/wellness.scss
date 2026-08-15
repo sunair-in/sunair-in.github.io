@@ -1,28 +1,26 @@
-
+@import "constant.scss";
 
 #wellness{
     .wellness-services{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        
+        column-gap: 2.5em;
+
         .service{
             display: flex;
             flex-direction: column;
-            width: 35em;
-            padding-right: 2.5em;
-
-            img{
-            }
+            width: min(35em, 100%);
 
             .title{
                 margin-top: 0.7em;
-                font-weight: bold;
-                font-size: 1.5em;
+                font-weight: 700;
+                font-size: clamp(1.15rem, 1rem + 0.7vw, 1.5rem);
             }
 
             .description{
-                margin: 1em 0 3.9em;
+                font-size: $font-size-body;
+                margin: 1em 0 2.5em;
             }
         }
     }

@@ -1,45 +1,87 @@
 @import "constant.scss";
 
 @font-face {
-    font-family: OpenSans;
-    src: url("../fonts/freefont/OpenSans-VariableFont_wdth\,wght.ttf") format('truetype');
+    font-family: Inter;
+    src: url("../fonts/inter/Inter-Variable.ttf") format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: OpenSans-Italic;
-    src: url("../fonts/freefont/OpenSans-Italic-VariableFont_wdth\,wght.ttf") format('truetype');
+    font-family: Inter;
+    src: url("../fonts/inter/Inter-Italic-Variable.ttf") format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url("../fonts/fraunces/Fraunces-Variable.ttf") format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url("../fonts/fraunces/Fraunces-Italic-Variable.ttf") format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
 }
 
 body{
-    font-size: 1em;
-    font-family: OpenSans;
+    font-size: $font-size-body;
+    font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
 }
 
 .display-flex{
     display: flex;
 }
 
+.button-primary, .button-primary-inverted {
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: clamp(0.85rem, 0.8rem + 0.2vw, 1rem);
+    min-height: 2.9em;
+    padding: 0 1.7em;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.14);
+    }
+
+    &:focus-visible {
+        outline: 2px solid $blue;
+        outline-offset: 2px;
+    }
+}
+
 .button-primary{
     background-color: $base-orange;
     color: $white;
     border: 0;
-    border-radius: 3px;
-    cursor: pointer;
-    min-height: 3.1em;
-    min-width: 12.1em;
-    font-weight: bold;
 }
 
 .button-primary-inverted{
     color: $base-orange;
     background-color: $white;
     border: 1px solid $base-orange;
-    border-radius: 3px;
-    cursor: pointer;
-    min-height: 3.1em;
-    min-width: 12.1em;
-    font-weight: bold;
 }
 
 .alternate-bg-color{
@@ -47,20 +89,29 @@ body{
 }
 
 .section-header{
-    font-weight: 900;
+    @include heading-face;
+    font-size: $font-size-h2;
     margin-top: 0px;
     text-align: center;
     padding-top: 0.68em;
 }
 
 .section-description{
+    font-size: $font-size-sub;
     text-align: center;
     padding-bottom: 2em;
     margin-top: 3em;
+    max-width: 42em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .wrapper{
-    padding: 0px 11em;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 6rem);
 }
 
 a.no-default-style:link {
@@ -91,13 +142,23 @@ a{
     flex-direction: row;
     justify-content: center;
 
+    // Every direct slide item sizes itself as a share of the row and shrinks
+    // together with its siblings, rather than a fixed/viewport-relative size
+    // computed in isolation — this is what guarantees N items always fit in
+    // one row at any width instead of wrapping into a clipped second row.
     .slide-entity{
         display: flex;
         flex-direction: column;
+        flex: 1 1 0;
+        max-width: 19em;
+        min-width: 0;
 
         img{
-            height: 25em;
-            width: 19em;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 19 / 25;
+            object-fit: cover;
+            border-radius: 4px;
         }
 
         .place{
@@ -126,31 +187,53 @@ a{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        flex: 1 1 0;
+        max-width: 20em;
+        min-width: 0;
 
         .column-header{
-            margin: 0;
+            margin: 0 0 0.9em;
+            padding-bottom: 0.5em;
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 1.05rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            color: $dark-blue;
+            border-bottom: 2px solid $base-orange;
         }
 
         .card{
-            border-radius: 3px;
-            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
             border: solid 1px $grey;
             display: flex;
             padding: 0.5em;
+            transition: transform 200ms ease, box-shadow 200ms ease;
+
+            &:hover{
+                transform: translateY(-3px);
+                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.14);
+            }
 
             img{
-                max-width: 6em;
-                max-height: 5.6em;
+                width: 5.6em;
+                height: 5.6em;
+                flex-shrink: 0;
+                aspect-ratio: 1;
+                object-fit: cover;
+                border-radius: 4px;
             }
 
             .card-description{
                 display: flex;
                 flex-direction: column;
                 padding: 0 .5em;
+                min-width: 0;
                 .card-title{
                     font-size: 15px;
                     margin: 0;
-                    color:$blue;
+                    color:$dark-blue;
                 }
                 .card-info{
                     font-size: 13px;

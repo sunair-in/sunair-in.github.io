@@ -1,22 +1,105 @@
 @import "constant.scss";
 
 .header-section{
-    justify-content: space-evenly;
-    height: 6.2em;
+    justify-content: space-between;
+    height: 4.4em;
     align-items: center;
+    padding: 0 1.25rem;
+    position: relative;
+
+    @include bp-md {
+        justify-content: space-evenly;
+        height: 6.2em;
+        padding: 0 clamp(1.5rem, 4vw, 4rem);
+    }
 }
 
 .logo{
-    min-height: 3em;
-    min-width: 5em;
-    height: 4em;
-    width: 5.5em;
+    min-height: 2.5em;
+    min-width: 4.4em;
+    height: 2.8em;
+    width: 4.4em;
     cursor: pointer;
+
+    @include bp-md {
+        min-height: 3em;
+        min-width: 5em;
+        height: 4em;
+        width: 5.5em;
+    }
+}
+
+.nav-toggle-input{
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+
+    &:focus-visible + .nav-toggle-btn{
+        outline: 2px solid $blue;
+        outline-offset: 3px;
+    }
+
+    &:checked ~ .nav-bar{
+        max-height: 40em;
+    }
+}
+
+.nav-toggle-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.6em;
+    height: 1.1em;
+    cursor: pointer;
+
+    span{
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: $black;
+    }
+
+    @include bp-md {
+        display: none;
+    }
 }
 
 .nav-bar{
     flex-grow: .3;
     justify-content: space-evenly;
+    align-items: center;
     color: $black;
     font-weight: 600;
+    gap: 0 1.5em;
+
+    @media (max-width: 899px) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        background-color: $white;
+        box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.1);
+        transition: max-height 250ms ease;
+
+        a{
+            padding: 0.9em 1.25rem;
+            border-top: 1px solid $line-grey;
+            text-align: center;
+        }
+
+        .nav-cta{
+            padding: 1em 1.25rem;
+
+            .button-primary{
+                width: 100%;
+            }
+        }
+    }
 }

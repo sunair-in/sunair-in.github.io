@@ -8,3 +8,39 @@ $grey: #c7d0d4;
 $blue: #007ab5;
 $dark-grey:#444444;
 $line-grey:#e0e0e0;
+
+// Breakpoints (mobile-first: styles default to smallest, these gate up)
+$bp-sm: 600px;
+$bp-md: 900px;
+$bp-lg: 1200px;
+
+@mixin bp-sm {
+    @media (min-width: $bp-sm) { @content; }
+}
+
+@mixin bp-md {
+    @media (min-width: $bp-md) { @content; }
+}
+
+@mixin bp-lg {
+    @media (min-width: $bp-lg) { @content; }
+}
+
+// Fluid type scale (rem-based clamp, not raw vw) shared across sections
+$font-size-body: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+$font-size-sub: clamp(1.05rem, 1rem + 0.3vw, 1.25rem);
+$font-size-h2: clamp(1.5rem, 1.3rem + 1.1vw, 2.1rem);
+$font-size-hero: clamp(1.9rem, 1.3rem + 3.2vw, 3.4rem);
+
+// Fraunces: a warm, soft-curved editorial serif used only for headlines,
+// paired with Inter for everything else. font-variation-settings pushes
+// its optical-size and softness axes for a display-weight, storybook feel
+// that plain font-weight can't reach on its own.
+$font-heading: Fraunces, Georgia, serif;
+
+@mixin heading-face {
+    font-family: $font-heading;
+    font-weight: 600;
+    font-variation-settings: "opsz" 72, "SOFT" 60, "WONK" 0;
+    letter-spacing: -0.01em;
+}

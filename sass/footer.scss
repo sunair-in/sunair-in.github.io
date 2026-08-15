@@ -4,7 +4,13 @@
     background-color: $dark-blue;
     color:$white;
     text-align: center;
-    padding: 3.4em 20em 1em 20em;
+    padding: clamp(2em, 6vw, 3.4em) clamp(1.25rem, 6vw, 6rem) 1em;
+
+    p {
+        max-width: 42em;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .footer-nav{
         display: flex;
@@ -12,12 +18,18 @@
         flex-wrap: wrap;
         align-content: center;
         justify-content: space-evenly;
+        gap: 0.5em 1.5em;
         margin-top: 1em;
     }
 
     .social-media-icon-wrapper{
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin-top: 1.5em;
+
         img{
-            width: 3em;
+            width: 2em;
         }
     }
 }

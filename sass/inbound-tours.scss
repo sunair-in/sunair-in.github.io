@@ -1,6 +1,6 @@
 #inbound-tours{
     .slider-container{
-        height: 30em;
+        height: clamp(22em, 68vw, 29em);
     }
 
 }
