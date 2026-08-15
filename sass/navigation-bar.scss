@@ -6,6 +6,11 @@
     align-items: center;
     padding: 0 1.25rem;
     position: relative;
+    // #home right below is also position:relative (for its own absolute hero
+    // text) with no z-index — without an explicit z-index here, both sit at
+    // the same auto stacking level and paint order falls back to DOM order,
+    // so #home's banner (later in the document) covers the nav dropdown.
+    z-index: 20;
 
     @include bp-md {
         justify-content: space-evenly;
